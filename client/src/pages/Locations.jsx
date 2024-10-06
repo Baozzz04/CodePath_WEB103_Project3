@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-// import LocationsAPI from '../services/LocationsAPI'
+import LocationsAPI from "../services/LocationAPI.jsx";
 import unitygrid from "../assets/unitygrid.jpg";
 import "../css/Locations.css";
 
@@ -19,10 +19,10 @@ const Locations = () => {
         setLocations(locationsData);
 
         setVenueNames({
-          venue1: locationsData[0].name,
-          venue2: locationsData[1].name,
-          venue3: locationsData[2].name,
-          venue4: locationsData[3].name,
+          venue1: locationsData[0].location,
+          venue2: locationsData[1].location,
+          venue3: locationsData[2].location,
+          venue4: locationsData[3].location,
         });
         setListeners();
       } catch (error) {
